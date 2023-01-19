@@ -1,0 +1,55 @@
+.footer{
+    padding-top: 20px;
+    background: black;
+
+    &__links{
+        padding-left: 35px;
+        display: flex;
+        color: white;
+        justify-content: center;
+        a{
+            color: rgba(255, 255, 255, 0.705);
+            font-weight: 200;
+            margin-right: 35px;
+            text-decoration: none;
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+
+    &__logo{
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+        span{
+            color: rgba(255, 255, 255, 0.747);
+        }
+    }
+
+    &__wrapper{
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__descr{
+        color: rgba(255, 255, 255, 0.705);
+        text-transform: uppercase;
+        font-size: 9px;
+        font-weight: 200;
+        text-align: center;
+    }
+    &__link{
+        color: rgba(255, 255, 255, 0.705);
+        
+        &:hover{
+            color: $main-color;
+            text-decoration: none;
+        }
+        font-size: 14px;
+        font-weight: 300;
+
+    }
+
+}

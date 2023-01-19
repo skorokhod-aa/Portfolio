@@ -1,0 +1,104 @@
+.about{
+    padding-top: 140px;
+    background: $bck-image;
+    &:hover{
+        .about__line{
+            width: 200px;
+        }
+    }
+    // height: 740px;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__photo{
+        width: 400px;
+        height: 400px;
+        img{
+            opacity: 0.8;
+            border-radius: 100%;
+            border: $main-color solid;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__block{
+        width: 570px;
+        margin-left: 70px;
+        margin-top: 10px;
+    }
+    &__title{
+        margin-top: 6px;
+    }
+    &__subtitle{
+        z-index: 2;
+        position: relative;
+        padding-left: 12px;
+        @include before_circle;
+    }
+    &__line{
+        
+        width: 60px;
+        height: 3px;
+        background-color: $main-color;
+        transition: all .6s;
+
+    }
+    &__descr{
+        font-weight: 200;
+        margin-top: 20px;
+        // width: 570px;
+        padding-bottom: 40px;
+    }
+    &__skills{
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        // grid-template-rows: 116px 116px;
+        column-gap: 50px;
+        row-gap: 20px;
+        &-text{
+            font-style: normal;
+            font-weight: 200;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-block{
+            margin-left: 20px;
+        }
+
+        &-item{
+            padding: 5px;
+            display: flex;
+            justify-content:flex-start;
+            &:nth-child(1) {
+                .about__skills-circle{
+                    margin-right: 15px;
+                }
+            }
+            &:nth-child(2) {
+                .about__skills-circle{
+                    padding: 15px 0 0 25px;
+                }
+              }
+            // div{
+            //     ml20px
+            // }
+        }
+        &-circle{
+            display: block;
+            position: relative;
+            padding: 15px 0 0 15px;
+            width: 40px;
+            z-index: 2;
+            @include before_circle;
+            &:before {
+                top: 0;
+            }
+            img{
+                opacity: 0.7;
+            }
+        }
+    }
+
+}

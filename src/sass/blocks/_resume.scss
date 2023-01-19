@@ -1,0 +1,119 @@
+.resume{
+    background:$bck-image;
+    padding-top: 200px;
+    &:hover{
+        .devider{
+            width: 250px;
+        }
+        .resume__item{
+            &:before {
+                width: 43px;
+            }
+            &:after{
+                height: calc(100% + 8px);
+            }
+        }
+    }
+    &__subtitle{
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__title{
+        text-align: center;
+    }
+    
+    &__wrapper{
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        gap: 140px;
+        
+    }
+    
+
+    &__column{
+        &-title{
+            padding-left: 43px;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: $main-color;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul{
+            li{
+                list-style-type: none;
+            }
+        }
+    }
+
+    &__item{
+        padding-left: 49px;
+        position: relative;
+        &:before {
+            transition: all 3s;
+            content: '';
+            height: 1px;
+            width: 0px;
+            position: absolute;
+            top: 65px;
+            left: 7px;
+            background-color: $text-color;
+        }
+        &:after{
+            transition: all 2s;
+            content: '';
+            height: 0;
+            width: 1px;
+            position: absolute;
+            top: -8px;
+            left: 7px;
+            background-color: $text-color;
+        }
+        &-head{
+            padding: 45px 0 0 0;
+            display: flex;
+        }
+
+        &-descr{
+            margin-left: 14px;
+        }
+
+        &-body{
+            margin-top: 10px;
+        }
+        &-location{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: rgba(255, 255, 255, 0.788);
+        }
+
+        &-icon{
+            z-index: 2;
+            padding: 14px 0 0 17px;
+            position: relative;
+            @include before_circle;
+            &:before{
+                top: 5%;
+            }
+            img{
+                opacity: .6;
+            }
+        }
+    }
+
+}
